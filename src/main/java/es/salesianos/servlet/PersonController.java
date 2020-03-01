@@ -41,9 +41,8 @@ public class PersonController {
 
 	@PostMapping
 	@RequestMapping(value = "/list")
-	public ResponseEntity<List<User>> ListWithFilter(@RequestParam String filter) {
+	public ResponseEntity<List<User>> ListWithFilter() {
 		return new ResponseEntity<>(service.listAllUser(), HttpStatus.OK);
 	}
-
 
 }
