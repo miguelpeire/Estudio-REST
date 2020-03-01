@@ -30,7 +30,7 @@
 					<td><c:out value="${user.nombre}" /></td>
 					<td><c:out value="${user.apellido}" /></td>
 					<td><c:out value="${user.dni}" /></td>
-					<td><a href="/delete?dni=${user.nombre}">borrar</a></td>
+					<td><a href="/delete?dni=${user.dni}">borrar</a></td>
 				</tr>
 			</c:forEach>
 		</tbody>

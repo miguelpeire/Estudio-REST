@@ -51,12 +51,12 @@ public class ErrorService implements Service {
 	}
 
 	@Override
-	public void delete(Integer id) {
+	public void delete(String id) {
 		throw new RuntimeException("he reventado");
 	}
 
 	@Override
-	public void delete(String tablename, Integer id) {
+	public void delete(String tablename, String id) {
 		throw new RuntimeException("he reventado");
 
 	}

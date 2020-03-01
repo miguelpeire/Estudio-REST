@@ -27,7 +27,7 @@ public class PersonController {
 
 	// http://localhost:8080/api/v1/user/delete/equipo/
 	@RequestMapping(value = "/delete/{tablename}/", method = RequestMethod.GET)
-	public ResponseEntity delete(@PathVariable String tablename, @RequestParam(required = false) Integer id) {
+	public ResponseEntity delete(@PathVariable String tablename, @RequestParam(required = false) String id) {
 		service.delete(tablename, id);
 		return new ResponseEntity(HttpStatus.OK);
 	}
