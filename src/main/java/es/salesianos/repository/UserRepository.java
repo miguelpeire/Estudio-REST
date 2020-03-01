@@ -28,11 +28,12 @@ public class UserRepository {
 
 	public void insert(User userFormulario) {
 		log.debug("el log funciona");
-		String sql = "INSERT INTO USER (dni,nombre,apellido)" + "VALUES ( :dni, :nombre, :apellido)";
+		String sql = "INSERT INTO USER (dni,nombre,apellido,color)" + "VALUES ( :dni, :nombre, :apellido, :color)";
 		MapSqlParameterSource params = new MapSqlParameterSource();
 		params.addValue("dni", userFormulario.getDni());
 		params.addValue("nombre", userFormulario.getNombre());
 		params.addValue("apellido", userFormulario.getApellido());
+		params.addValue("color", userFormulario.getColor());
 		namedJdbcTemplate.update(sql, params);
 	}
 
@@ -50,8 +51,8 @@ public class UserRepository {
 	}
 
 	public void update(User user) {
-		String sql = "UPDATE user SET " + "nombre = ?, apellido = ? WHERE dni = ?";
-		jdbcTemplate.update(sql, user.getNombre(), user.getApellido(), user.getDni());
+		String sql = "UPDATE user SET " + "nombre = ?, apellido = ?, color = ? WHERE dni = ?";
+		jdbcTemplate.update(sql, user.getNombre(), user.getApellido(), user.getDni(), user.getColor());
 	}
 
 	public List<User> listAllUsers() {

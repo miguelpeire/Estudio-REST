@@ -55,12 +55,17 @@ export default class AddUserForm extends React.Component {
           value={this.state.dni}
           onChange={handleChange.bind(this)}
           onKeyDown={this.keyPressed.bind(this)} />
+        <input type="text" class="form-control"
+          placeholder="Add a new user color..."
+          name="color"
+          value={this.state.color}
+          onChange={handleChange.bind(this)}
+          onKeyDown={this.keyPressed.bind(this)} />
       </div>
       <div>
         <button className="btn btn-default" type="button" onClick={this.addUser.bind(this)}>Insert User</button>
       </div>
     </div>
->
       );
   }
 }

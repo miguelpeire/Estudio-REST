@@ -18,6 +18,8 @@ prefix = "form"%>
 		<form:input type="text" path="nombre"/> <br/>
 		<span>apellidos:</span> 
 		<form:input type="text" path="apellido"/><br/>
+		<span>color:</span>
+		<form:input type="text" path="color"/><br/>
 		<input type="submit"/>
 	</form:form>
 	</body>

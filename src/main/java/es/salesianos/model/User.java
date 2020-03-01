@@ -5,6 +5,7 @@ public class User implements IEntity<String> {
 	String dni;
 	String nombre;
 	String apellido;
+	String color;
 
 	public String getDni() {
 		return dni;
@@ -39,5 +40,15 @@ public class User implements IEntity<String> {
 	public void setId(String id) {
 		setDni(id);
 	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	
 
 }
